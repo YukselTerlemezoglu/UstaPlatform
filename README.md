@@ -23,29 +23,29 @@ Vatandaşın oluşturduğu talep uygun ustayla eşleştirilir, ardından fiyat h
 ## Proje Yapısı
 
 UstaPlatform.sln
-│
-├── UstaPlatform.Domain → Temel varlıklar ve IPricingRule arayüzü
-│ ├── Usta.cs
-│ ├── Citizen.cs
-│ ├── Request.cs
-│ ├── WorkOrder.cs
-│ ├── Route.cs
-│ ├── Schedule.cs
-│ └── IPricingRule.cs
-│
-├── UstaPlatform.Infrastructure → In-memory veri kaynakları ve Matcher
-│ ├── Repositories.cs
-│
-├── UstaPlatform.Pricing → PricingEngine (plugin loader)
-│ ├── PricingEngine.cs
-│
-├── UstaPlatform.App → Konsol uygulaması (Main Program)
-│ ├── Program.cs
-│
-└── Plugins (DLL klasörü)
-├── WeekendSurchargeRule.dll → Hafta sonu +%20
-├── DistancePlus15Rule.dll → Uzak mesafe +%15
-└── LoyaltyDiscountRule.dll → Sadık müşteri -%10
+
+UstaPlatform.Domain → Temel varlıklar ve IPricingRule arayüzü
+Usta.cs
+Citizen.cs
+Request.cs
+WorkOrder.cs
+Route.cs
+Schedule.cs
+IPricingRule.cs
+
+UstaPlatform.Infrastructure → In-memory veri kaynakları ve Matcher
+Repositories.cs
+
+UstaPlatform.Pricing → PricingEngine (plugin loader)
+PricingEngine.cs
+
+UstaPlatform.App → Konsol uygulaması (Main Program)
+Program.cs
+
+Plugins (DLL klasörü)
+WeekendSurchargeRule.dll → Hafta sonu +%20
+DistancePlus15Rule.dll → Uzak mesafe +%15
+LoyaltyDiscountRule.dll → Sadık müşteri -%10
 
 ## Çalışma Mantığı
 
